@@ -1,5 +1,5 @@
 # Homework2
-eval_big function at arith/lib/core.mli is about implementation for big step semantics
+eval_big function at arith/lib/core.ml is about implementation for big step semantics
 
 ```
 #build project
