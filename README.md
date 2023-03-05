@@ -3,7 +3,7 @@ eval_big function at core.ml is about implementation for big step semantics
 
 ```
 #build project
-cd Homework2/arith 
+cd arith 
 dune build . --profile release
 ```
 
