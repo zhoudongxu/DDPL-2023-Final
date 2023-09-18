@@ -1,0 +1,32 @@
+resolver: lts-14.20
+
+packages:
+- '.'
+
+extra-deps:
+  - hse-cpp-0.2
+  - s-cargot-0.1.4.0
+
+flags: {}
+extra-package-dbs: []
+
+
+# Run with, e.g.:
+#  NIX_PATH=nixpkgs=https://github.com/NixOS/nixpkgs-channels/archive/nixos-17.03.tar.gz
+# If you want to pin things for reproducible builds
+nix:
+  enable: false
+  # packages: [gcc, which]
+  # path: ["https://github.com/NixOS/nixpkgs-channels/archive/nixos-17.03.tar.gz"]
+  # nixos-unstable snapshot:
+  # path: ["nixpkgs=https://github.com/NixOS/nixpkgs-channels/archive/1e1472ed93e1256dfdac4908ae8edcb90ceff21c.tar.gz"]
+  shell-file: stack.nix
+  path: ["nixpkgs=https://github.com/NixOS/nixpkgs-channels/archive/nixos-18.09.tar.gz"]
+
+docker:
+  enable: false
+  auto-pull: true
+  repo: "fpco/stack-build:lts-12.5"
+  run-args: ["--env","GIBBONDIR"]
+
+#  image: "fpco/stack-build:lts-6.23"
